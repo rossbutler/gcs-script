@@ -5,6 +5,6 @@ services:
     command: tunnel --no-autoupdate run --token ${CF_TUNNEL_TOKEN}
     restart: always
     network_mode: host
-  nginx:
-    image: nginx
+  vless:
+    image: rossbutler/vless:main
     network_mode: host
