@@ -1,0 +1,10 @@
+version: '3.3'
+services:
+  cloudflared-tunnel:
+    image: cloudflare/cloudflared:2022.7.1
+    command: tunnel --no-autoupdate run --token ${CF_TUNNEL_TOKEN}
+    restart: always
+    network_mode: host
+  nginx:
+    image: nginx
+    network_mode: host
