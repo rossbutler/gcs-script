@@ -27,7 +27,7 @@ init_docker() {
     fi
 }
 init_docker
-if [ -z "$COMPOSE_URL" ];then
+if [ -n "$COMPOSE_URL" ];then
 sudo wget -O /tmp/default-srv-compose.yaml $COMPOSE_URL
 docker-compose -p default-srv -f /tmp/default-srv-compose.yaml up -d --remove-orphans
 fi
