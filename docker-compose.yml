@@ -6,5 +6,5 @@ services:
     restart: always
     network_mode: host
   vless:
-    image: rossbutler/vless:main
+    image: rossbutler/vless@sha256:07fd750b0e7e560355b210fa3938cbafec3ca6cb3638261a39c23909fb82f01d
     network_mode: host
